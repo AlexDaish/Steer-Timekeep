@@ -1,0 +1,18 @@
+<%= simple_form_form @users do |f| %>
+<%= f.input :emails %>
+<%= f.input :first_name %>
+<%= f.input :last_name %>
+
+<%= f.input :username %>
+<%= f.input :password %>
+<%= f.input :password_confirmation %>
+
+<%= f.input :address_line_1 %>
+<%= f.input :address_line_2 %>
+<%= f.input :address_line_3 %>
+<%= f.input :address_line_4 %>
+<%= f.input :postcode %>
+
+<%= f.button :submit %>
+
+<% end %>
