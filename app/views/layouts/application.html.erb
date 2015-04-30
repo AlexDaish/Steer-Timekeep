@@ -7,34 +7,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container">
+		<header>
+			<nav>
+				<%= link_to root_path do %>
+					<h1>Time</br>Keep</h1>
 
-	<header>
-	<nav>
-		<%= link_to root_path do %>
-		<h1>Time</br>Keep</h1>
-
-			<div class="actions">
-				<%# if logged in %>
-					<%# link_to current user's name %>
-					<%# link_to log out %>
-				<%# else %>
-					<%# link_0to log in %>
-					<%# sign up %>
-				<%# end %>
-			</div>
-	</nav>
-		<% end %>
-		<div class="container">
+					<div class="actions">
+						<%# if logged in %>
+							<%# link_to current user's name %>
+							<%# link_to log out %>
+						<%# else %>
+							<%# link_0to log in %>
+							<%# sign up %>
+						<%# end %>
+					</div>
+				<% end %>	
+			</nav>
+			
+		
 			<% flash.each do |key, value|%>
 				<div class="flash <%= key %>">
 					<p><%= value %></p>
 				</div>
 			<% end %>
-			<%= yield %>
-		
-		
-	</header>
-		</div>
+		</header>
+
+		<%= yield %>
+			
+	</div>
 
 	<footer>
 		<div class="container">
