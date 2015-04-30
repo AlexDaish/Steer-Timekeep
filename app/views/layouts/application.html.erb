@@ -15,7 +15,9 @@
 
 					<div class="actions">
 						<%# if logged in %>
-							<%# link_to current user's name %>
+							<%# link_to current user's 
+							name %>
+							<%= session[:user_id] %>
 							<%# link_to log out %>
 						<%# else %>
 							<%# link_0to log in %>
