@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
 	end
 
 	def name
-		first_name  || username || email	
+		first_name || username || email	
 	end
 end
