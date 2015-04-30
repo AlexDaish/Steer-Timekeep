@@ -3,11 +3,11 @@
 	
 		<div class="watch">
 			<!-- Add in link to show page -->
-			<%= link_to watch_path(1) do %>
+			<%= link_to watch_path(watch) do %>
 				<!-- add in image here -->
 				<div class="price">
 					<!-- link this to new orders -->
-					<span><%= watch[:price_in_pence] %></span>
+					<span><%= watch.price_in_pence %></span>
 				</div>
 				<h2><%= watch[:name] %></h2>
 			<% end %>
