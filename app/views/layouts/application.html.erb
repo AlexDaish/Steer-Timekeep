@@ -14,17 +14,17 @@
 					<h1>Time</br>Keep</h1>
 
 					<div class="actions">
-						<%# if logged in %>
-							<%# link_to current user's 
-							name %>
-							<%= session[:user_id] %>
-							<%# link_to log out %>
-						<%# else %>
+						<% if logged_in? %>
+							<%= link_to current_user.name%>
+							<%= link_to "Log out" %>
+						<% else %>
 							<%# link_0to log in %>
 							<%# sign up %>
-						<%# end %>
+						<% end %>
+
 					</div>
-				<% end %>	
+				<% end %>
+							
 			</nav>
 			
 		
