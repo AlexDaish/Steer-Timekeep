@@ -44,3 +44,8 @@ group :development, :test do
 end
 
 gem 'simple_form'
+
+gem 'paperclip', '~> 4.2'
+
+gem  'aws-sdk', '~> 1.6'
+
