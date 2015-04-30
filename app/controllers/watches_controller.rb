@@ -24,6 +24,7 @@ class WatchesController < ApplicationController
 
   def edit
   	@watch = Watch.find(params[:id])
+  	
   end
 
   def update
