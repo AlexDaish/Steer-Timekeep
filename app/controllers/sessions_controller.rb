@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def new
   	#don't need to assibn anything not saving anything to the DB
+    
   end
 
   def create
