@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
   	# set user_id - current_user.id
   	@order.user = current_user
    	#charging code goes here
-  	if @order.save
+  	if @order.save_and_charge
   		flash[:success] = "Order made"
   		redirect_to @order
   	else
