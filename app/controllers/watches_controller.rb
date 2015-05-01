@@ -26,14 +26,13 @@ class WatchesController < ApplicationController
   end
 
   def edit
-    require_owner(@watch)
   	@watch = Watch.find(params[:id])
-
+    require_owner(@watch)
   end
 
   def update
-    require_owner(@watch)
   	@watch = Watch.find(params[:id])
+    require_owner(@watch)
 
   	if @watch.update(watch_params)
   		flash[:success] = "Updated #{@watch.name}"

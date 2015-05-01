@@ -10,7 +10,7 @@
 	<%=	simple_format @watch[:description] %>
 
 	<div>
-		<span>Posted by <%# mail_to @watch.user.email, @watch.user.name %></span>
+		<span>Posted by <% mail_to @watch.user.email, @watch.user.name %></span>
 	</div>
 	
 	<div class="actions">

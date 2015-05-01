@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
 
 	validates :email, presence:true
 
+	def owns(resource)
+		self == resource.user
+	end
+
 	def full_name
 		if first_name.present? and last_name.present?
 			[first_name, last_name].join(" ")
