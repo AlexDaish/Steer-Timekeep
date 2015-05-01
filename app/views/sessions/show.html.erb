@@ -1,2 +1,18 @@
-<h1>Sessions#show</h1>
-<p>Find me in app/views/sessions/show.html.erb</p>
+<h2>Account Settings for <%= current_user.name %></h2>
+<section class="orders__recent">
+	<h3>RECENT ORDERS</h3>
+
+	<!-- loop over recent orders -->
+	<!-- Purchased on DATE -->
+</section>
+
+<section class="recent__uploads">
+	<h3>RECENT UPLOADS</h3>
+
+	<!-- loop over recent uploads -->
+	<% current_user.watches.each do |watch| %>
+	<h4><%= link_to watch.name, watch_path(watch) %></h4>
+	<p>Uploaded <%= time_ago_in_words(watch.created_at) %> ago. </p>
+	</br>
+	<% end %>
+</section>

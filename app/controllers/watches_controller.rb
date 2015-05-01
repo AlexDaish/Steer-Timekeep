@@ -1,4 +1,6 @@
 class WatchesController < ApplicationController
+  before_action :require_user, only: [:new, :create]
+
   def index
   	@watches = Watch.all
 
@@ -12,6 +14,7 @@ class WatchesController < ApplicationController
 
   def create
   	@watch = Watch.new(watch_params)
+    @watch.user_id = current_user.id
 
   	if @watch.save
   		flash[:success]= "Thanks for uploading"
@@ -23,11 +26,13 @@ class WatchesController < ApplicationController
   end
 
   def edit
+    require_owner(@watch)
   	@watch = Watch.find(params[:id])
 
   end
 
   def update
+    require_owner(@watch)
   	@watch = Watch.find(params[:id])
 
   	if @watch.update(watch_params)
@@ -40,6 +45,7 @@ class WatchesController < ApplicationController
   end
 
   def destroy
+    require_owner(@watch)
   	@watch = Watch.find(params[:id])
   		
 	flash[:success] = "#{@watch.name} was removed successfully" if @watch.destroy

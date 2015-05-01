@@ -25,6 +25,7 @@ class SessionsController < ApplicationController
 
 
   def show
+      require_user
   end
 
   def destroy

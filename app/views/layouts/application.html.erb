@@ -12,6 +12,7 @@
 			<nav>
 				<%= link_to root_path do %>
 					<h1>Time</br>Keep</h1>
+				<% end %>		
 
 					<div class="actions">
 						<% if logged_in? %>
@@ -21,9 +22,7 @@
 							<%= link_to "Log in", new_session_path %>
 							<%= link_to "Sign up", new_user_path %>
 						<% end %>
-
 					</div>
-				<% end %>
 							
 			</nav>
 			
